@@ -1,0 +1,236 @@
+# Infestation related events
+
+namespace = infested_hive_mind_infestation
+
+### Infested leaders
+# From = Leader
+country_event = {
+	id = infested_hive_mind_infestation.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_valid_civic = civic_infestation
+	}
+
+	immediate = {
+		from = {
+			leader_give_infested_trait = yes
+		}
+	}
+}
+
+### Infesting pops every year !
+# Sends the events on the planets
+event = {
+	id = infested_hive_mind_infestation.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_valid_civic = civic_infestation
+			}
+			every_owned_planet = {
+				planet_event = { id = infested_hive_mind_infestation.21 }
+			}
+		}
+	}
+}
+
+# Infesting new pops
+planet_event = {
+	id = infested_hive_mind_infestation.21
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		AND = { # A new pop to infest
+			owner = {
+				OR = {
+					has_policy_flag = infestation_not_forced
+					has_policy_flag = infestation_forced
+				}
+			}
+			any_owned_pop = {
+				can_be_first_infested = yes
+			}
+		}
+	}
+
+	immediate = {
+		### Base : 0 // Forced infestation : +1 // Random : + 0-2
+		# Base
+		set_variable = {
+			which = infestedPopNumber
+			value = 0
+		}
+
+		# Forced infestation
+		if = {
+			limit = {
+				owner = {
+					has_policy_flag = infestation_forced
+				}
+			}
+			change_variable = {
+				which = infestedPopNumber
+				value = 1
+			}
+		}
+
+		# Random
+		random_list = {
+			1 = {
+				change_variable = {
+					which = infestedPopNumber
+					value = 0
+				}
+			}
+			1 = {
+				change_variable = {
+					which = infestedPopNumber
+					value = 1
+				}
+			}
+			1 = {
+				change_variable = {
+					which = infestedPopNumber
+					value = 2
+				}
+			}
+		}
+
+		# Technologies
+		if = {
+			limit = {
+				owner = {
+					has_technology = tech_selected_lineages
+				}
+			}
+			change_variable = {
+				which = infestedPopNumber
+				value = 1
+			}
+		}
+
+		# Ascension perks
+		if = {
+			limit = {
+				owner = {
+					has_modifier = modifier_infestation_tier_4
+				}
+			}
+			change_variable = {
+				which = infestedPopNumber
+				value = 1
+			}
+		}
+
+		### Infest the pops
+		while = {
+			limit = {
+				check_variable = {
+					which = "infestedPopNumber"
+					value > 0
+				}
+				any_owned_pop = {
+					NOT = {
+						has_infested_trait = yes
+					}
+				}
+			}
+
+			### Infestation
+			# If there is a non-infested pop, or a pop with the wrong infestation tier
+
+			random_owned_pop = {
+				limit = {
+					can_be_first_infested = yes
+				}
+
+				# Infest it !
+				pop_new_infestation = yes
+			}
+
+			# Decrement infestedPopNumber
+			change_variable = {
+				 which = infestedPopNumber
+				 value = -1
+		 	}
+		}
+	}
+}
+
+### Infestation tier improving
+country_event = {
+	id = infested_hive_mind_infestation.50
+	title = infested_hive_mind_infestation.50.t
+	picture = GFX_evt_genetic_modification
+
+  desc = {
+		text = infested_hive_mind_infestation.50.d.1
+		trigger = {
+			last_increased_tech = "tech_epigenetic_triggers"
+			has_valid_civic = civic_infestation
+		}
+	}
+
+  desc = {
+		text = infested_hive_mind_infestation.50.d.2
+		trigger = {
+			last_increased_tech = "tech_gene_tailoring"
+			has_valid_civic = civic_infestation
+		}
+	}
+
+  desc = {
+		text = infested_hive_mind_infestation.50.d.3
+		trigger = {
+			last_increased_tech = "tech_infestation_mastery"
+			has_valid_civic = civic_infestation
+		}
+	}
+
+	desc = {
+		text = infested_hive_mind_infestation.50.d.4
+		trigger = {
+			has_ascension_perk = ap_perfect_symbiosis
+			has_valid_civic = civic_infestation
+		}
+	}
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+      last_increased_tech = "tech_epigenetic_triggers"
+      last_increased_tech = "tech_gene_tailoring"
+      last_increased_tech = "tech_infestation_mastery"
+			AND = {
+				has_ascension_perk = ap_perfect_symbiosis
+				NOT = { has_country_flag = flag_perfect_symbiosis }
+			}
+    }
+
+		has_valid_civic = civic_infestation
+	}
+
+	option = {
+		name = infested_hive_mind_infestation.50.a
+		custom_tooltip = infested_species_get_stage_upgrade
+		hidden_effect = {
+      empire_refresh_infestation_modifier = yes
+			empire_refresh_infestation_tier = yes
+			every_leader_upgrade_infested_trait = yes
+
+			if = {
+				limit = {
+					has_ascension_perk = ap_perfect_symbiosis
+				}
+				set_country_flag = flag_perfect_symbiosis
+			}
+		}
+	}
+}

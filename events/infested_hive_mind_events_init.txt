@@ -1,0 +1,16 @@
+namespace = infested_hive_mind_init
+
+country_event = {
+	id = infested_hive_mind_init.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_valid_civic = civic_infestation
+	}
+
+	immediate = {
+		empire_refresh_infestation_modifier = yes
+		empire_init_infestation_tier = yes
+	}
+}

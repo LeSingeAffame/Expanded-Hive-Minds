@@ -1,0 +1,150 @@
+### Symbiosis
+# Admirals
+leader_trait_admiral_symbiosis_0 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_symbiosis_0.dds"
+
+	modifier = {
+	}
+
+	leader_trait = yes
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}
+
+leader_trait_admiral_symbiosis_1 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_symbiosis_1.dds"
+
+	modifier = {
+		ship_fire_rate_mult = 0.10
+		ship_weapon_range_mult = 0.15
+	}
+
+	leader_trait = yes
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}
+
+# Generals
+leader_trait_general_symbiosis_0 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_symbiosis_0.dds"
+
+	modifier = {
+	}
+
+	leader_trait = yes
+	leader_class = { general }
+	initial = no
+	randomized = no
+}
+
+leader_trait_general_symbiosis_1 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_symbiosis_1.dds"
+
+	modifier = {
+		army_damage_mult = 0.15
+		army_morale = 0.15
+	}
+
+	leader_trait = yes
+	leader_class = { general }
+	initial = no
+	randomized = no
+}
+
+# Governors
+leader_trait_governor_symbiosis_0 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_symbiosis_0.dds"
+
+	modifier = {
+	}
+
+	leader_trait = yes
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+leader_trait_governor_symbiosis_1 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_symbiosis_1.dds"
+
+	modifier = {
+		planet_building_cost_mult = -0.25
+		planet_building_build_speed_mult = 0.25
+		planet_clear_blocker_cost_mult = -0.25
+		planet_clear_blocker_time_mult = -0.25
+	}
+
+	leader_trait = yes
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+# Scientists
+leader_trait_scientist_symbiosis_0 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_symbiosis_0.dds"
+
+	modifier = {
+	}
+
+	leader_trait = yes
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		physics
+		society
+		engineering
+		survey
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+leader_trait_scientist_symbiosis_1 = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_symbiosis_1.dds"
+
+	modifier = {
+		all_technology_research_speed = 0.15
+		science_ship_survey_speed = 0.15
+		ship_anomaly_research_speed_mult = 0.20
+		ship_anomaly_fail_risk = -0.05
+	}
+
+	leader_trait = yes
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		physics
+		society
+		engineering
+		survey
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

@@ -1,0 +1,3 @@
+﻿l_english:
+ bombardment_infesting:0 "Infesting"
+ bombardment_infesting_desc:0 "$bombardment_raiding$ Bombardment targets enemy population centers with specialized raiding drones that scoop up their people and bring them back to our nests to infest them.\n- §ELight§! damage to §YArmies§!\n- §ELight§! damage to §YTiles§!\n- §YModerate§! damage to §YPops§!\n- Will §Yabduct§! Pops when possible instead of killing them\n- Will §RNOT§! abduct or kill the last §Y5§! Pops"

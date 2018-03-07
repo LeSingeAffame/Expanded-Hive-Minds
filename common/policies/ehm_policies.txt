@@ -1,0 +1,56 @@
+infestation_policy = {
+	potential = {
+		has_valid_civic = civic_infestation
+	}
+
+	option = {
+		name = "no_infestation"
+
+		policy_flags = {
+			no_infestation
+		}
+
+		valid = {
+		}
+
+		AI_weight = {
+      factor = 1
+			modifier = {
+				factor = 10
+				has_valid_civic = civic_hive_devouring_swarm
+			}
+		}
+	}
+
+  option = {
+		name = "infestation_not_forced"
+
+		policy_flags = {
+			infestation_not_forced
+		}
+
+		valid = {
+			NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		}
+
+		AI_weight = {
+      factor = 2
+		}
+	}
+
+  option = {
+		name = "infestation_forced"
+
+		policy_flags = {
+			infestation_forced
+		}
+
+		valid = {
+			NOT = { has_valid_civic = civic_hive_devouring_swarm }
+		}
+
+		AI_weight = {
+      factor = 1
+		}
+	}
+}

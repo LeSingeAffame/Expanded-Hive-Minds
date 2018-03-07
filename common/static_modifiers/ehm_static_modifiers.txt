@@ -1,0 +1,24 @@
+# Shows your infestation level
+modifier_infestation_tier_0 = {
+  icon = "gfx/interface/icons/modifiers/mod_leader_age.dds"
+}
+
+modifier_infestation_tier_1 = {
+  icon = "gfx/interface/icons/modifiers/mod_leader_age.dds"
+}
+
+modifier_infestation_tier_2 = {
+  icon = "gfx/interface/icons/modifiers/mod_leader_age.dds"
+}
+
+modifier_infestation_tier_3 = {
+  icon = "gfx/interface/icons/modifiers/mod_leader_age.dds"
+}
+
+modifier_infestation_tier_4 = {
+  icon = "gfx/interface/icons/modifiers/mod_leader_age.dds"
+}
+
+modifier_infestation_pop_numbers = {
+  icon = "gfx/interface/icons/modifiers/mod_leader_age.dds"
+}

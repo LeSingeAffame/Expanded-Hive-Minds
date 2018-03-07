@@ -1,0 +1,136 @@
+# Bhenn'Thell Infesting Swarm
+ehm1 = {
+	name = "ehm1"
+	adjective = "PRESCRIPTED_adjective_ehm1"
+	spawn_enabled = yes # yes / no / always
+
+	ship_prefix = ""
+
+	species={
+		class="FUN"
+		portrait="fun16"
+		name="PRESCRIPTED_species_name_ehm1"
+		plural="PRESCRIPTED_species_plural_ehm1"
+		adjective="PRESCRIPTED_species_adjective_ehm1"
+		name_list="INFESTED_HIVE"
+
+		trait="trait_hive_mind"
+		trait="trait_repugnant"
+		trait="trait_nonadaptive"
+		trait="trait_very_strong"
+		trait="trait_rapid_breeders"
+		trait="trait_resilient"
+	}
+
+	room = "personality_hive_mind_room"
+
+	authority = "auth_hive_mind"
+	civics = { "civic_infestation" "civic_hive_ascetic" }
+	government = gov_infested_hive_mind
+
+	ethic = "ethic_gestalt_consciousness"
+
+	flags = { }
+
+	planet_name = "Oros"
+	planet_class = "pc_arid"
+	initializer = ""
+	system_name = "Cevant"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	empire_flag={
+		icon={
+			category="zoological"
+			file="flag_zoological_23.dds"
+		}
+		background={
+			category="backgrounds"
+			file="v.dds"
+		}
+		colors={
+			"purple"
+			"grey"
+			"null"
+			"null"
+		}
+	}
+
+	ruler={
+		gender=female
+		name=" "
+		portrait="fun16"
+		texture=0
+		hair=0
+		clothes=0
+		ruler_title="PRESCRIPTED_ruler_title_ehm1"
+	}
+}
+
+# Mishar Great Hunters
+ehm2 = {
+	name = "ehm2"
+	adjective = "Misharan"
+	spawn_enabled = yes # yes / no / always
+
+	ship_prefix = ""
+
+	species = {
+		class="HUM"
+		portrait="humanoid_04"
+		name="PRESCRIPTED_species_name_ehm2"
+		plural="PRESCRIPTED_species_plural_ehm2"
+		adjective="PRESCRIPTED_species_adjective_ehm2"
+		name_list="HUM1"
+
+		trait="trait_hive_mind"
+		trait="trait_intelligent"
+		trait="trait_quick_learners"
+		trait="trait_weak"
+	}
+
+	room = "personality_hive_mind_room"
+
+	authority = "auth_hive_mind"
+	civics = { "civic_symbiosis" "civic_hive_devouring_swarm" }
+	government = gov_devouring_swarm
+
+	ethic = "ethic_gestalt_consciousness"
+
+	flags = { }
+
+	planet_name = "Rihi"
+	planet_class = "pc_tropical"
+	initializer = ""
+	system_name = "Niri"
+
+	graphical_culture = "mammalian_01"
+	city_graphical_culture = "mammalian_01"
+
+	empire_flag = {
+		icon = {
+			category="domination"
+			file="domination_21.dds"
+		}
+		background = {
+			category="backgrounds"
+			file="sinus.dds"
+		}
+		colors = {
+			"dark_blue"
+			"dark_green"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		gender=male
+		name="PRESCRIPTED_ruler_title_ehm2"
+		portrait="humanoid_04_male_01"
+		texture=0
+		hair=0
+		clothes=4
+	}
+}

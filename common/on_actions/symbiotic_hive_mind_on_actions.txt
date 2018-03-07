@@ -1,0 +1,13 @@
+# Triggers when the game starts
+on_game_start_country = {
+	events = {
+    symbiotic_hive_mind_init.1 # Assign the Infested trait
+	}
+}
+
+# Triggers whenever a new leader spawns
+on_leader_spawned = {
+	events = {
+		symbiotic_hive_mind_leaders.1
+	}
+}

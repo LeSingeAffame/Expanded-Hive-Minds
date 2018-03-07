@@ -1,0 +1,260 @@
+﻿### Name list for Infested Hive Mind
+### Created by LeSingeAffame
+### Based on a template by Miranda van den Brink
+
+INFESTED_HIVE = {
+	randomized = no
+	should_name_home_system_planets = no
+
+	ship_names = {
+		generic = {
+			"Controlled Vessel"
+		}
+
+		corvette = {
+			"Controlled Corvette"
+		}
+
+		destroyer = {
+			"Controlled Destroyer"
+		}
+
+		cruiser = {
+			"Controlled Cruiser"
+		}
+
+		battleship = {
+			"Controlled Battleship"
+		}
+
+		science = {
+			"Science Controller"
+		}
+
+		colonizer = {
+			"Infester"
+		}
+
+		constructor = {
+			"Resources Controller"
+		}
+
+
+		mining_station = { }
+		research_station = { }
+		#terraform_station = { }
+		observation_station = { }
+
+		military_station_small = {}
+		military_station_medium = {}
+		military_station_large = {}
+
+		transport = {
+			"Infesting Swarm Transport"
+		}
+	}
+
+	ship_class_names = {
+		generic = {
+		"Type Alpha" "Type Beta" "Type Gamma" "Type Delta" "Type Epsilon" "Type Zeta" "Type Eta" "Type Theta" "Type Iota" "Type Kappa" "Type Lambda" "Type Mu" "Type Nu" "Type Xi" "Type Omicron" "Type Pi" "Type Rho" "Type Sigma" "Type Tau" "Type Upsilon" "Type Phi" "Type Chi" "Type Psi" "Type Omega"
+		}
+	}
+
+	fleet_names = {
+		random_names = {
+		}
+		sequential_name = "%O% Combat Swarm"
+	}
+
+	### ARMIES
+	army_names = {
+		defense_army = {
+			sequential_name = "%O% Hive Defenders"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Aggressors"
+		}
+
+		slave_army = {
+			sequential_name = "%O% Slave Warrior Drones"
+		}
+
+		clone_army = {
+			sequential_name = "%O% Cloned Warrior Drones"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Robotic Warrior Drones"
+		}
+
+		robotic_defense_army = {
+			sequential_name = "%O% Robotic Defense Drones"
+		}
+
+		android_army = {
+			sequential_name = "%O% Droid Warrior Drones"
+		}
+
+		android_defense_army = {
+			sequential_name = "%O% Droid Defense Drones"
+		}
+
+		psionic_army = {
+			sequential_name = "%O% Psi Warrior Drones"
+		}
+
+		xenomorph_army = {
+			sequential_name = "%O% Morphed Warrior Drones"
+		}
+
+		gene_warrior_army = {
+			sequential_name = "%O% Enhanced Warrior Drones"
+		}
+	}
+
+	### PLANETS
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"Alpha Cell" "Swarm Cell Alpha" "Drone Cell" "Nesting Chamber" "Drone Nest" "Outward Reach" "Exterior Drone Chamber" "Extension Node" "Standard Node" "Drone Node" "Expansive Cell" "Production Chamber" "Superior Vertex" "Expansion Node" "Development Chamber" "Advancement Cell" "Manufacturing Node" "Assembly Cell" "Guard Junction" "Supra-Vertex" "Forward Junction" "Assembly Node" "Brood Colony" "Alpha Colony" "Beta Colony" "Gamma Colony" "Delta Colony" "Epsilon Colony" "Zeta Colony" "Eta Colony" "Theta Colony" "Iota Colony" "Production Cell" "Brood Cell" "Drone Cluster" "Swarm Colony" "Drone Colony" "Assembly Colony"
+			}
+		}
+
+		pc_gaia = {
+			names = {
+				"Larval Paradise"
+			}
+		}
+
+		pc_desert = {
+			names = {
+			}
+		}
+
+		pc_tropical = {
+			names = {
+			}
+		}
+
+		pc_arid = {
+			names = {
+			}
+		}
+
+		pc_continental = {
+			names = {
+			}
+		}
+
+		pc_ocean = {
+			names = {
+				"Larval Sea"
+			}
+		}
+
+		pc_tundra = {
+			names = {
+			}
+		}
+
+		pc_arctic = {
+			names = {
+			}
+		}
+
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+
+		### UNINHABITABLE PLANETS
+
+		pc_gas_giant = {
+			names = {
+			"Alpha" "Beta" "Gamma" "Delta" "Epsilon" "Zeta" "Eta" "Theta" "Iota" "Kappa" "Lambda" "Mu" "Nu" "Xi" "Omicron" "Pi" "Rho" "Sigma" "Tau" "Upsilon" "Phi" "Chi" "Psi" "Omega" "Orb I" "Orb II" "Orb III" "Orb IV" "Orb V" "Orb VI" "Orb VII" "Orb VIII" "Orb IX" "Orb X"
+			}
+		}
+
+		pc_barren = {
+			names = {
+			"Alpha" "Beta" "Gamma" "Delta" "Epsilon" "Zeta" "Eta" "Theta" "Iota" "Kappa" "Lambda" "Mu" "Nu" "Xi" "Omicron" "Pi" "Rho" "Sigma" "Tau" "Upsilon" "Phi" "Chi" "Psi" "Omega" "Orb I" "Orb II" "Orb III" "Orb IV" "Orb V" "Orb VI" "Orb VII" "Orb VIII" "Orb IX" "Orb X"
+			}
+		}
+
+		pc_molten = {
+			names = {
+			"Alpha" "Beta" "Gamma" "Delta" "Epsilon" "Zeta" "Eta" "Theta" "Iota" "Kappa" "Lambda" "Mu" "Nu" "Xi" "Omicron" "Pi" "Rho" "Sigma" "Tau" "Upsilon" "Phi" "Chi" "Psi" "Omega" "Orb I" "Orb II" "Orb III" "Orb IV" "Orb V" "Orb VI" "Orb VII" "Orb VIII" "Orb IX" "Orb X"
+			}
+		}
+
+		pc_barren_cold = {
+			names = {
+			"Alpha" "Beta" "Gamma" "Delta" "Epsilon" "Zeta" "Eta" "Theta" "Iota" "Kappa" "Lambda" "Mu" "Nu" "Xi" "Omicron" "Pi" "Rho" "Sigma" "Tau" "Upsilon" "Phi" "Chi" "Psi" "Omega" "Orb I" "Orb II" "Orb III" "Orb IV" "Orb V" "Orb VI" "Orb VII" "Orb VIII" "Orb IX" "Orb X"
+			}
+		}
+
+		pc_toxic = {
+			names = {
+			"Alpha" "Beta" "Gamma" "Delta" "Epsilon" "Zeta" "Eta" "Theta" "Iota" "Kappa" "Lambda" "Mu" "Nu" "Xi" "Omicron" "Pi" "Rho" "Sigma" "Tau" "Upsilon" "Phi" "Chi" "Psi" "Omega" "Orb I" "Orb II" "Orb III" "Orb IV" "Orb V" "Orb VI" "Orb VII" "Orb VIII" "Orb IX" "Orb X"
+			}
+		}
+
+		pc_frozen = {
+			names = {
+			"Alpha" "Beta" "Gamma" "Delta" "Epsilon" "Zeta" "Eta" "Theta" "Iota" "Kappa" "Lambda" "Mu" "Nu" "Xi" "Omicron" "Pi" "Rho" "Sigma" "Tau" "Upsilon" "Phi" "Chi" "Psi" "Omega" "Orb I" "Orb II" "Orb III" "Orb IV" "Orb V" "Orb VI" "Orb VII" "Orb VIII" "Orb IX" "Orb X"
+			}
+		}
+	}
+
+	### CHARACTERS
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+
+				"Infested Drone 1" "Infested Drone 2" "Infested Drone 3" "Infested Drone 4" "Infested Drone 5" "Infested Drone 6" "Infested Drone 7" "Infested Drone 8" "Infested Drone 9" "Infested Drone 10" "Infested Drone 11" "Infested Drone 12" "Infested Drone 13" "Infested Drone 14"
+				"Infested Drone 15" "Infested Drone 16" "Infested Drone 17" "Infested Drone 18" "Infested Drone 19" "Infested Drone 20" "Infested Drone 21" "Infested Drone 22" "Infested Drone 23" "Infested Drone 24" "Infested Drone 25" "Infested Drone 26" "Infested Drone 27" "Infested Drone 28" "Infested Drone 29"
+				"Infested Drone 30" "Infested Drone 31" "Infested Drone 32" "Infested Drone 33" "Infested Drone 34" "Infested Drone 35" "Infested Drone 36" "Infested Drone 37" "Infested Drone 38" "Infested Drone 39" "Infested Drone 40" "Infested Drone 41" "Infested Drone 42" "Infested Drone 43" "Infested Drone 44"
+				"Infested Drone 45" "Infested Drone 46" "Infested Drone 47" "Infested Drone 48" "Infested Drone 49" "Infested Drone 50" "Infested Drone 51" "Infested Drone 52" "Infested Drone 53" "Infested Drone 54" "Infested Drone 55" "Infested Drone 56" "Infested Drone 57" "Infested Drone 58" "Infested Drone 59"
+				"Infested Drone 60" "Infested Drone 61" "Infested Drone 62" "Infested Drone 63" "Infested Drone 64" "Infested Drone 65" "Infested Drone 66" "Infested Drone 67" "Infested Drone 68" "Infested Drone 69" "Infested Drone 70" "Infested Drone 71" "Infested Drone 72" "Infested Drone 73" "Infested Drone 74"
+
+				"Controller 1" "Controller 2" "Controller 3" "Controller 4" "Controller 5" "Controller 6" "Controller 7" "Controller 8" "Controller 9" "Controller 10" "Controller 11" "Controller 12" "Controller 13" "Controller 14"
+				"Controller 15" "Controller 16" "Controller 17" "Controller 18" "Controller 19" "Controller 20" "Controller 21" "Controller 22" "Controller 23" "Controller 24" "Controller 25" "Controller 26" "Controller 27" "Controller 28" "Controller 29"
+				"Controller 30" "Controller 31" "Controller 32" "Controller 33" "Controller 34" "Controller 35" "Controller 36" "Controller 37" "Controller 38" "Controller 39" "Controller 40" "Controller 41" "Controller 42" "Controller 43" "Controller 44"
+				"Controller 45" "Controller 46" "Controller 47" "Controller 48" "Controller 49" "Controller 50" "Controller 51" "Controller 52" "Controller 53" "Controller 54" "Controller 55" "Controller 56" "Controller 57" "Controller 58" "Controller 59"
+				"Controller 60" "Controller 61" "Controller 62" "Controller 63" "Controller 64" "Controller 65" "Controller 66" "Controller 67" "Controller 68" "Controller 69" "Controller 70" "Controller 71" "Controller 72" "Controller 73" "Controller 74"
+			}
+
+			# Always combined with a second name
+			first_names = {
+			}
+
+			# Always combined with a first name
+			second_names = {
+			}
+
+			regnal_first_names = {
+			}
+
+			regnal_second_names = {
+			}
+		}
+	}
+
+	ruler_names = {
+		default = {
+			full_names = {
+				"First Infested" "Swarm First Born"
+			}
+		}
+	}
+}

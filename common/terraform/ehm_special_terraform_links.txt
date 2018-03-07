@@ -1,0 +1,299 @@
+@infestedWorldEnergyCost = 10000
+@infestedWorldTime = 1
+
+terraform_link = {
+	to = "pc_hive_minded_world"
+	from = "pc_desert"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+terraform_link = {
+	from = "pc_arid"
+	to = "pc_hive_minded_world"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+terraform_link = {
+	to = "pc_hive_minded_world"
+	from = "pc_savannah"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+terraform_link = {
+	to = "pc_hive_minded_world"
+	from = "pc_arctic"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+terraform_link = {
+	to = "pc_hive_minded_world"
+	from = "pc_tundra"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+terraform_link = {
+	to = "pc_hive_minded_world"
+	from = "pc_alpine"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+terraform_link = {
+	to = "pc_hive_minded_world"
+	from = "pc_continental"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+terraform_link = {
+	to = "pc_hive_minded_world"
+	from = "pc_tropical"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}
+
+terraform_link = {
+	to = "pc_hive_minded_world"
+	from = "pc_ocean"
+
+	energy = @infestedWorldEnergyCost
+	duration = @infestedWorldTime
+
+	potential = {
+		has_ascension_perk = "ap_world_shaper"
+		has_valid_civic = civic_hive_minded_world
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			energy < 40000
+		}
+		modifier = {
+			factor = 0
+			from = { sector_controlled = yes }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_mechanical_empire = yes
+				is_cyborg_empire = yes
+				has_authority = auth_machine_intelligence
+			}
+		}
+	}
+}

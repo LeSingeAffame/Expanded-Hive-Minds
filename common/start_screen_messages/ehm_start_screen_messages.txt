@@ -1,0 +1,10 @@
+# Infested Hive Mind
+part = {
+	location = 1
+	localization = "START_SCREEN_PART_TWO_INFESTED_HIVE_MIND"
+
+	trigger = {
+		has_government = gov_infested_hive_mind
+		NOT = { has_country_flag = custom_start_screen }
+	}
+}

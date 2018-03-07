@@ -1,0 +1,28 @@
+namespace = infested_hive_mind_pre_sapient
+
+planet_event = {
+	id = infested_hive_mind_pre_sapient.1
+	title = infested_hive_mind_pre_sapient.1.t
+	desc = infested_hive_mind_pre_sapient.1.d
+	picture = GFX_evt_genetic_modification
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { has_valid_civic = civic_infestation }
+	}
+
+	option = {
+		name = infested_hive_mind_pre_sapient.1.a
+
+		custom_tooltip = new_uplifted_pops_will_be_infested
+		hidden_effect = {
+			every_owned_pop = {
+				limit = {
+					NOT = { has_infested_trait = yes }
+				}
+		    pop_new_infestation = yes
+	    }
+		}
+	}
+}

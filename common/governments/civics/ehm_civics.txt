@@ -1,0 +1,102 @@
+### Special Civics
+civic_infestation = {
+  modification = no
+  icon = "gfx/interface/icons/governments/civics/civic_hive_infestation.dds"
+  potential = { authority = { value = auth_hive_mind } }
+  possible = {
+    civics = {
+      NOR = {
+        value = civic_symbiosis
+      }
+    }
+  }
+  random_weight = {
+    base = 1
+  }
+  description = civic_tooltip_infestation_effects
+}
+
+civic_symbiosis = {
+  modification = no
+  icon = "gfx/interface/icons/governments/civics/civic_hive_symbiosis.dds"
+  potential = { authority = { value = auth_hive_mind } }
+  possible = {
+    civics = {
+      NOR = {
+        value = civic_infestation
+      }
+    }
+  }
+  random_weight = {
+    base = 1
+  }
+  description = civic_tooltip_symbiosis_effects
+}
+
+civic_hive_minded_world = {
+  modification = no
+  potential = { authority = { value = auth_hive_mind } }
+  random_weight = { base = 1 }
+  description = civic_hive_minded_world_effects
+}
+
+### Boring regular civics
+civic_perpetual_evolution = {
+  potential = { authority = { value = auth_hive_mind } }
+  random_weight = { base = 5 }
+	modifier = {
+		country_society_tech_research_speed = 0.20
+	}
+}
+
+civic_underground_drones = {
+  potential = { authority = { value = auth_hive_mind } }
+  random_weight = { base = 5 }
+	modifier = {
+		country_resource_minerals_mult = 0.10
+	}
+}
+
+civic_self_consumption = {
+  potential = { authority = { value = auth_hive_mind } }
+  random_weight = { base = 5 }
+	modifier = {
+		pop_food_req_mult = -0.15
+	}
+}
+
+civic_brooding_units = {
+  potential = { authority = { value = auth_hive_mind } }
+  random_weight = { base = 5 }
+	modifier = {
+		pop_growth_speed = 0.15
+	}
+}
+
+civic_cerebrates = {
+  potential = { authority = { value = auth_hive_mind } }
+  random_weight = { base = 5 }
+	modifier = {
+		leader_cost = -0.50
+		country_leader_cap = 4
+	}
+}
+
+civic_living_space = {
+  potential = { authority = { value = auth_hive_mind } }
+  random_weight = { base = 5 }
+	modifier = {
+		country_claim_influence_cost_mult = -0.1
+		country_starbase_influence_cost_mult = -0.1
+	}
+}
+
+civic_living_buildings = {
+  potential = { authority = { value = auth_hive_mind } }
+  random_weight = { base = 5 }
+  modifier = {
+    planet_building_cost_mult = -0.10
+    planet_building_build_speed_mult = 0.1
+    # Give access to a more powerful version of an edict with a similar effect
+  }
+}

@@ -1,0 +1,24 @@
+has_symbiosis_trait_leader_stage_0 = {
+  OR = {
+    has_trait = leader_trait_admiral_symbiosis_0
+    has_trait = leader_trait_general_symbiosis_0
+    has_trait = leader_trait_governor_symbiosis_0
+    has_trait = leader_trait_scientist_symbiosis_0
+  }
+}
+
+has_symbiosis_trait_leader_stage_1 = {
+  OR = {
+    has_trait = leader_trait_admiral_symbiosis_1
+    has_trait = leader_trait_general_symbiosis_1
+    has_trait = leader_trait_governor_symbiosis_1
+    has_trait = leader_trait_scientist_symbiosis_1
+  }
+}
+
+has_symbiosis_trait_leader = {
+  OR = {
+    has_symbiosis_trait_leader_stage_0 = yes
+    has_symbiosis_trait_leader_stage_1 = yes
+  }
+}

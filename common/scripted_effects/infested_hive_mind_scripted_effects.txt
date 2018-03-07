@@ -1,0 +1,904 @@
+### Updating species rights
+pop_update_species_rights = {
+  set_citizenship_type = {
+    type = citizenship_full
+    country = owner
+  }
+
+  set_living_standard = {
+    type = living_standard_hive_mind
+    country = owner
+  }
+}
+
+### Remove infested trait
+pop_remove_infested_trait_stage_0 = {
+  modify_species = {
+    species = this
+    remove_trait = trait_infested_0
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_remove_infested_trait_stage_1 = {
+  modify_species = {
+    species = this
+    remove_trait = trait_infested_1
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_remove_infested_trait_stage_2 = {
+  modify_species = {
+    species = this
+    remove_trait = trait_infested_2
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_remove_infested_trait_stage_3 = {
+  modify_species = {
+    species = this
+    remove_trait = trait_infested_3
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_remove_infested_trait_stage_4 = {
+  modify_species = {
+    species = this
+    remove_trait = trait_infested_4
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_remove_infested_trait = {
+  switch = {
+		trigger = has_trait
+		trait_infested_0 = { pop_remove_infested_trait_stage_0 = yes }
+		trait_infested_1 = { pop_remove_infested_trait_stage_1 = yes }
+		trait_infested_2 = { pop_remove_infested_trait_stage_2 = yes }
+		trait_infested_3 = { pop_remove_infested_trait_stage_3 = yes }
+		trait_infested_4 = { pop_remove_infested_trait_stage_4 = yes }
+	}
+
+  remove_self_modified = yes # scripted effect
+}
+
+### Add infested trait
+pop_give_infested_trait_stage_0 = {
+  modify_species = {
+    species = this
+    add_trait = trait_infested_0
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_give_infested_trait_stage_1 = {
+  modify_species = {
+    species = this
+    add_trait = trait_infested_1
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_give_infested_trait_stage_2 = {
+  modify_species = {
+    species = this
+    add_trait = trait_infested_2
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_give_infested_trait_stage_3 = {
+  modify_species = {
+    species = this
+    add_trait = trait_infested_3
+    add_traits_at_start_of_list = yes
+  }
+}
+
+pop_give_infested_trait_stage_4 = {
+  modify_species = {
+    species = this
+    add_trait = trait_infested_4
+    add_traits_at_start_of_list = yes
+  }
+}
+
+### Remove infested trait (leaders)
+leader_remove_infested_trait_stage_0 = {
+  switch = {
+		trigger = has_trait
+		leader_trait_admiral_infested_0 = { remove_trait = leader_trait_admiral_infested_0 }
+		leader_trait_general_infested_0 = { remove_trait = leader_trait_general_infested_0 }
+    leader_trait_governor_infested_0 = { remove_trait = leader_trait_governor_infested_0 }
+    leader_trait_scientist_infested_0 = { remove_trait = leader_trait_scientist_infested_0 }
+	}
+}
+
+leader_remove_infested_trait_stage_1 = {
+  switch = {
+		trigger = has_trait
+		leader_trait_admiral_infested_1 = { remove_trait = leader_trait_admiral_infested_1 }
+		leader_trait_general_infested_1 = { remove_trait = leader_trait_general_infested_1 }
+    leader_trait_governor_infested_1 = { remove_trait = leader_trait_governor_infested_1 }
+    leader_trait_scientist_infested_1 = { remove_trait = leader_trait_scientist_infested_1 }
+	}
+}
+
+leader_remove_infested_trait_stage_2 = {
+  switch = {
+		trigger = has_trait
+		leader_trait_admiral_infested_2 = { remove_trait = leader_trait_admiral_infested_2 }
+		leader_trait_general_infested_2 = { remove_trait = leader_trait_general_infested_2 }
+    leader_trait_governor_infested_2 = { remove_trait = leader_trait_governor_infested_2 }
+    leader_trait_scientist_infested_2 = { remove_trait = leader_trait_scientist_infested_2 }
+	}
+}
+
+leader_remove_infested_trait_stage_3 = {
+  switch = {
+		trigger = has_trait
+		leader_trait_admiral_infested_3 = { remove_trait = leader_trait_admiral_infested_3 }
+		leader_trait_general_infested_3 = { remove_trait = leader_trait_general_infested_3 }
+    leader_trait_governor_infested_3 = { remove_trait = leader_trait_governor_infested_3 }
+    leader_trait_scientist_infested_3 = { remove_trait = leader_trait_scientist_infested_3 }
+	}
+}
+
+leader_remove_infested_trait_stage_4 = {
+  switch = {
+		trigger = has_trait
+		leader_trait_admiral_infested_4 = { remove_trait = leader_trait_admiral_infested_4 }
+		leader_trait_general_infested_4 = { remove_trait = leader_trait_general_infested_4 }
+    leader_trait_governor_infested_4 = { remove_trait = leader_trait_governor_infested_4 }
+    leader_trait_scientist_infested_4 = { remove_trait = leader_trait_scientist_infested_4 }
+	}
+}
+
+leader_remove_infested_trait = {
+  if = {
+    limit = {
+      has_infested_trait_leader_stage_0 = yes
+    }
+    leader_remove_infested_trait_stage_0 = yes
+
+    else = {
+      if = {
+        limit = {
+          has_infested_trait_leader_stage_1 = yes
+        }
+        leader_remove_infested_trait_stage_1 = yes
+
+        else = {
+          if = {
+            limit = {
+              has_infested_trait_leader_stage_2 = yes
+            }
+            leader_remove_infested_trait_stage_2 = yes
+
+            else = {
+              if = {
+                limit = {
+                  has_infested_trait_leader_stage_3 = yes
+                }
+                leader_remove_infested_trait_stage_3 = yes
+
+                else = {
+                  if = {
+                    limit = {
+                      has_infested_trait_leader_stage_4 = yes
+                    }
+                    leader_remove_infested_trait_stage_4 = yes
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+### Give infested trait (leaders)
+leader_give_infested_trait_stage_0 = {
+  leader_remove_infested_trait = yes
+  switch = {
+    trigger = leader_class
+    admiral = { add_trait = leader_trait_admiral_infested_0 }
+    general = { add_trait = leader_trait_general_infested_0 }
+    governor = { add_trait = leader_trait_governor_infested_0 }
+    scientist = { add_trait = leader_trait_scientist_infested_0 }
+  }
+}
+
+leader_give_infested_trait_stage_1 = {
+  leader_remove_infested_trait = yes
+  switch = {
+    trigger = leader_class
+    admiral = { add_trait = leader_trait_admiral_infested_1 }
+    general = { add_trait = leader_trait_general_infested_1 }
+    governor = { add_trait = leader_trait_governor_infested_1 }
+    scientist = { add_trait = leader_trait_scientist_infested_1 }
+  }
+}
+
+leader_give_infested_trait_stage_2 = {
+  leader_remove_infested_trait = yes
+  switch = {
+    trigger = leader_class
+    admiral = { add_trait = leader_trait_admiral_infested_2 }
+    general = { add_trait = leader_trait_general_infested_2 }
+    governor = { add_trait = leader_trait_governor_infested_2 }
+    scientist = { add_trait = leader_trait_scientist_infested_2 }
+  }
+}
+
+leader_give_infested_trait_stage_3 = {
+  leader_remove_infested_trait = yes
+  switch = {
+    trigger = leader_class
+    admiral = { add_trait = leader_trait_admiral_infested_3 }
+    general = { add_trait = leader_trait_general_infested_3 }
+    governor = { add_trait = leader_trait_governor_infested_3 }
+    scientist = { add_trait = leader_trait_scientist_infested_3 }
+  }
+}
+
+leader_give_infested_trait_stage_4 = {
+  leader_remove_infested_trait = yes
+  switch = {
+    trigger = leader_class
+    admiral = { add_trait = leader_trait_admiral_infested_4 }
+    general = { add_trait = leader_trait_general_infested_4 }
+    governor = { add_trait = leader_trait_governor_infested_4 }
+    scientist = { add_trait = leader_trait_scientist_infested_4 }
+  }
+}
+
+leader_give_infested_trait = {
+  if = {
+    limit = {
+      species = { has_trait = trait_infested_0 }
+    }
+    leader_give_infested_trait_stage_0 = yes
+
+    else = {
+      if = {
+        limit = {
+          species = { has_trait = trait_infested_1 }
+        }
+        leader_give_infested_trait_stage_1 = yes
+
+        else = {
+          if = {
+            limit = {
+              species = { has_trait = trait_infested_2 }
+            }
+            leader_give_infested_trait_stage_2 = yes
+
+            else = {
+              if = {
+                limit = {
+                  species = { has_trait = trait_infested_3 }
+                }
+                leader_give_infested_trait_stage_3 = yes
+
+                else = {
+                  if = {
+                    limit = {
+                      species = { has_trait = trait_infested_4 }
+                    }
+                    leader_give_infested_trait_stage_4 = yes
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+leaders_infest = {
+  every_owned_leader = {
+    change_species = last_created
+    leader_give_infested_trait = yes
+  }
+
+  every_pool_leader = {
+    change_species = last_created
+    leader_give_infested_trait = yes
+  }
+}
+
+leader_upgrade_infested_trait = {
+  if = {
+    limit = {
+      has_infested_trait_leader_stage_0 = yes
+      owner = {
+        has_modifier = modifier_infestation_tier_1
+      }
+    }
+    leader_give_infested_trait_stage_1 = yes
+
+    else = {
+      if = {
+        limit = {
+          OR = {
+            has_infested_trait_leader_stage_0 = yes
+            has_infested_trait_leader_stage_1 = yes
+          }
+          owner = {
+            has_modifier = modifier_infestation_tier_2
+          }
+        }
+        leader_give_infested_trait_stage_2 = yes
+
+        else = {
+          if = {
+            limit = {
+              OR = {
+                has_infested_trait_leader_stage_0 = yes
+                has_infested_trait_leader_stage_1 = yes
+                has_infested_trait_leader_stage_2 = yes
+              }
+              owner = {
+                has_modifier = modifier_infestation_tier_3
+              }
+            }
+            leader_give_infested_trait_stage_3 = yes
+
+            else = {
+              if = {
+                limit = {
+                  OR = {
+                    has_infested_trait_leader_stage_0 = yes
+                    has_infested_trait_leader_stage_1 = yes
+                    has_infested_trait_leader_stage_2 = yes
+                    has_infested_trait_leader_stage_3 = yes
+                  }
+                  owner = {
+                    has_modifier = modifier_infestation_tier_4
+                  }
+                }
+                leader_give_infested_trait_stage_4 = yes
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+every_leader_upgrade_infested_trait = {
+  every_owned_leader = {
+    limit = { has_infested_trait_leader = yes }
+    leader_upgrade_infested_trait = yes
+  }
+
+  every_pool_leader = {
+    limit = { has_infested_trait_leader = yes }
+    leader_upgrade_infested_trait = yes
+  }
+}
+
+### Refresh infestation tier
+empire_refresh_infestation_modifier = {
+  # nothing										:	Tier 0
+  # tech_epigenetic_triggers 	: Tier 1
+  # tech_gene_tailoring				: Tier 2
+  # tech_infestation_mastery 	: Tier 3
+  # ap_perfect_symbiosis 			: Tier 4
+
+  switch = {
+    trigger = has_modifier
+    modifier_infestation_tier_0 = { remove_modifier = "modifier_infestation_tier_0" }
+    modifier_infestation_tier_1 = { remove_modifier = "modifier_infestation_tier_1" }
+    modifier_infestation_tier_2 = { remove_modifier = "modifier_infestation_tier_2" }
+    modifier_infestation_tier_3 = { remove_modifier = "modifier_infestation_tier_3" }
+    modifier_infestation_tier_4 = { remove_modifier = "modifier_infestation_tier_4" }
+  }
+
+  if = {
+    limit = {
+      has_ascension_perk = ap_perfect_symbiosis
+    }
+    add_modifier = {
+      modifier = "modifier_infestation_tier_4"
+    }
+
+    else = {
+      if = {
+        limit = {
+          has_technology = tech_infestation_mastery
+        }
+        add_modifier = {
+          modifier = "modifier_infestation_tier_3"
+        }
+
+        else = {
+          if = {
+            limit = {
+              has_technology = tech_gene_tailoring
+            }
+            add_modifier = {
+              modifier = "modifier_infestation_tier_2"
+            }
+
+            else = {
+              if = {
+                limit = {
+                  has_technology = tech_epigenetic_triggers
+                }
+                add_modifier = {
+                  modifier = "modifier_infestation_tier_1"
+                }
+
+                else = {
+                  add_modifier = {
+                    modifier = "modifier_infestation_tier_0"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+pop_include_to_hive_mind = {
+  if = {
+    limit = {
+      NOT = {	has_trait = trait_hive_mind }
+    }
+    modify_species = {
+      species = this
+      add_trait = trait_hive_mind
+      add_traits_at_start_of_list = yes
+    }
+    remove_self_modified = yes # scripted effect
+    remove_culture_shock = yes
+    clear_ethos = yes
+  }
+}
+
+pop_get_infestation_tier = {
+  owner = {
+    switch = {
+      trigger = has_modifier
+      modifier_infestation_tier_0 = { set_variable = { which = infestedTier value = 0 } }
+      modifier_infestation_tier_1 = { set_variable = { which = infestedTier value = 1 } }
+      modifier_infestation_tier_2 = { set_variable = { which = infestedTier value = 2 } }
+      modifier_infestation_tier_3 = { set_variable = { which = infestedTier value = 3 } }
+      modifier_infestation_tier_4 = { set_variable = { which = infestedTier value = 4 } }
+    }
+
+    # Let's stay between 0 and 4
+    if = {
+      limit = {
+        check_variable = {
+          which = infestedTier
+          value < 0
+        }
+      }
+      set_variable = {
+        which = infestedTier
+        value = 0
+      }
+
+      else = {
+        if = {
+          limit = {
+            check_variable = {
+              which = infestedTier
+              value > 4
+            }
+          }
+          set_variable = {
+            which = infestedTier
+            value = 4
+          }
+        }
+      }
+    }
+  }
+}
+
+pop_refresh_infestation_tier = {
+  if = {
+    limit = {
+      is_same_species = owner.species
+    }
+    set_pop_flag = pop_primary_species
+  }
+  # The owner_species starts at two, other at 0
+  pop_get_infestation_tier = yes
+
+  pop_remove_infested_trait = yes
+
+  # Give the correct infestation tier
+  if = {
+    limit = {
+      owner = {
+        check_variable = {
+          which = "infestedTier"
+          value > 3
+        }
+      }
+      NOR = {
+        has_trait = trait_infested_4
+      }
+    }
+
+    pop_give_infested_trait_stage_4 = yes
+
+    else = {
+      if = {
+        limit = {
+          owner = {
+            check_variable = {
+              which = "infestedTier"
+              value > 2
+            }
+          }
+          NOR = {
+            has_trait = trait_infested_4
+            has_trait = trait_infested_3
+          }
+        }
+
+        pop_give_infested_trait_stage_3 = yes
+
+        else = {
+          if = {
+            limit = {
+              owner = {
+                check_variable = {
+                  which = "infestedTier"
+                  value > 1
+                }
+              }
+              NOR = {
+                has_trait = trait_infested_4
+                has_trait = trait_infested_3
+                has_trait = trait_infested_2
+              }
+            }
+
+            pop_give_infested_trait_stage_2 = yes
+
+            else = {
+              if = {
+                limit = {
+                  owner = {
+                    check_variable = {
+                      which = "infestedTier"
+                      value > 0
+                    }
+                  }
+                  NOR = {
+                    has_trait = trait_infested_4
+                    has_trait = trait_infested_3
+                    has_trait = trait_infested_2
+                    has_trait = trait_infested_1
+                  }
+                }
+
+                pop_give_infested_trait_stage_1 = yes
+
+                else = {
+                  if = {
+                    limit = {
+                      NOR = {
+                        has_trait = trait_infested_4
+                        has_trait = trait_infested_3
+                        has_trait = trait_infested_2
+                        has_trait = trait_infested_1
+                        has_trait = trait_infested_0
+                      }
+                    }
+
+                    pop_give_infested_trait_stage_0 = yes
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  pop_update_species_rights = yes
+
+  # Update the species rights
+  remove_self_modified = yes # scripted effect
+}
+
+empire_refresh_infestation_tier = {
+  every_owned_planet = {
+    every_owned_pop = {
+      limit = {
+        has_infested_trait = yes
+        pop_infestation_tier_can_be_upgraded = yes
+      }
+
+      pop_refresh_infestation_tier = yes
+    }
+  }
+
+  random_owned_pop = {
+    limit = {
+      has_pop_flag = pop_primary_species
+    }
+    root = { change_dominant_species = { species = prev } }
+  }
+
+  every_owned_pop = {
+    limit = {
+      has_pop_flag = pop_primary_species
+    }
+    remove_pop_flag = pop_primary_species
+  }
+}
+
+pop_give_resources_new_infestatation = {
+  if = {
+    limit = {
+      has_modifier = modifier_infestation_tier_0
+    }
+    add_monthly_resource_mult = {
+      resource = unity
+      value = 0.5
+      min = 1
+      max = 10
+    }
+
+    add_monthly_resource_mult = {
+      resource = society_research
+      value = 0.5
+      min = 1
+      max = 10
+    }
+
+    else = {
+      if = {
+        limit = {
+          has_modifier = modifier_infestation_tier_1
+        }
+        add_monthly_resource_mult = {
+          resource = unity
+          value = 1
+          min = 1
+          max = 20
+        }
+
+        add_monthly_resource_mult = {
+          resource = society_research
+          value = 1
+          min = 1
+          max = 20
+        }
+
+        else = {
+          if = {
+            limit = {
+              has_modifier = modifier_infestation_tier_2
+            }
+            add_monthly_resource_mult = {
+              resource = unity
+              value = 1.5
+              min = 1
+              max = 30
+            }
+
+            add_monthly_resource_mult = {
+              resource = society_research
+              value = 1.5
+              min = 1
+              max = 30
+            }
+
+            else = {
+              if = {
+                limit = {
+                  has_modifier = modifier_infestation_tier_3
+                }
+                add_monthly_resource_mult = {
+                  resource = unity
+                  value = 2
+                  min = 1
+                  max = 40
+                }
+
+                add_monthly_resource_mult = {
+                  resource = society_research
+                  value = 2
+                  min = 1
+                  max = 40
+                }
+
+                else = {
+                  if = {
+                    limit = {
+                      has_modifier = modifier_infestation_tier_4
+                    }
+                    add_monthly_resource_mult = {
+                      resource = unity
+                      value = 2.5
+                      min = 1
+                      max = 50
+                    }
+
+                    add_monthly_resource_mult = {
+                      resource = society_research
+                      value = 2.5
+                      min = 1
+                      max = 50
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+pop_new_infestation_init = {
+  # The owner_species starts at two, other at 0
+  owner = {
+    set_variable = {
+      which = infestedTier
+      value = 2
+    }
+
+    # Let's stay between 0 and 4
+    if = {
+      limit = {
+        check_variable = {
+          which = infestedTier
+          value < 0
+        }
+      }
+      set_variable = {
+        which = infestedTier
+        value = 0
+      }
+
+      else = {
+        if = {
+          limit = {
+            check_variable = {
+              which = infestedTier
+              value > 4
+            }
+          }
+          set_variable = {
+            which = infestedTier
+            value = 4
+          }
+        }
+      }
+    }
+  }
+
+  # Give the correct infestation tier
+  if = {
+    limit = {
+      owner = {
+        check_variable = {
+          which = "infestedTier"
+          value > 3
+        }
+      }
+    }
+    modify_species = {
+      species = this
+      add_trait = trait_infested_4
+      add_traits_at_start_of_list = yes
+    }
+
+     else = {
+       if = {
+         limit = {
+           owner = {
+             check_variable = {
+               which = "infestedTier"
+               value > 2
+             }
+           }
+         }
+         modify_species = {
+           species = this
+           add_trait = trait_infested_3
+           add_traits_at_start_of_list = yes
+         }
+
+         else = {
+           if = {
+             limit = {
+               owner = {
+                 check_variable = {
+                   which = "infestedTier"
+                   value > 1
+                 }
+               }
+             }
+             modify_species = {
+               species = this
+               add_trait = trait_infested_2
+               add_traits_at_start_of_list = yes
+             }
+
+             else = {
+               if = {
+                 limit = {
+                   owner = {
+                     check_variable = {
+                       which = "infestedTier"
+                       value > 0
+                     }
+                   }
+                 }
+                 modify_species = {
+                   species = this
+                   add_trait = trait_infested_1
+                   add_traits_at_start_of_list = yes
+                 }
+
+                 else = {
+                  modify_species = {
+                     species = this
+                     add_trait = trait_infested_0
+                     add_traits_at_start_of_list = yes
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  # Update the species rights
+  remove_self_modified = yes # scripted effect
+
+  root = { change_dominant_species = { species = last_created } }
+
+  pop_update_species_rights = yes
+}
+
+pop_new_infestation = {
+  # First, let's make sure it's part of the hive mind
+  pop_include_to_hive_mind = yes
+  pop_refresh_infestation_tier = yes
+
+  root.owner = {
+    pop_give_resources_new_infestatation = yes
+  }
+}
+
+empire_init_infestation_tier = {
+  every_owned_planet = {
+    every_owned_pop = {
+      pop_new_infestation_init = yes
+    }
+  }
+
+  leaders_infest = yes
+
+  add_modifier = {
+    modifier = "modifier_infestation_pop_numbers"
+  }
+}

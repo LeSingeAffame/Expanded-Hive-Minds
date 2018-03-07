@@ -1,0 +1,23 @@
+namespace = symbiotic_hive_mind_leaders
+
+### Give the corresponding symbiosis trait to every newly spawned leader
+country_event = {
+	id = symbiotic_hive_mind_leaders.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_symbiosis_0 }
+				species = { has_trait = trait_symbiosis_1 }
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			leader_give_symbiosis_trait = yes
+		}
+	}
+}

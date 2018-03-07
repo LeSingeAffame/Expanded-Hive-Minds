@@ -1,0 +1,14 @@
+# Hive Mind
+gov_infested_hive_mind = {
+	ruler_title = RT_INFESTED_HIVE_MIND
+	ruler_title_female = RT_INFESTED_HIVE_MIND_FEMALE
+
+	possible = {
+		has_authority = auth_hive_mind
+		has_valid_civic = civic_infestation
+	}
+
+	weight = {
+		base = 100000
+	}
+}

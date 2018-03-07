@@ -1,0 +1,42 @@
+namespace = symbiotic_hive_mind_init
+
+# Assign trait_symbiosis_0 to the primary species
+country_event = {
+	id = symbiotic_hive_mind_init.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_valid_civic = civic_symbiosis
+	}
+
+	immediate = {
+		modify_species = {
+			species = root.owner_species
+			add_trait = trait_symbiosis_0
+			add_traits_at_start_of_list = yes
+		}
+
+		root = { change_dominant_species = { species = last_created } }
+
+		every_owned_leader = {
+			limit = {
+				NOR = {
+					has_symbiosis_trait_leader_stage_0 = yes
+					has_trait = leader_trait_curator
+				}
+			}
+			leader_give_symbiosis_trait_stage_0 = yes
+		}
+
+		every_pool_leader = {
+			limit = {
+				NOR = {
+					has_symbiosis_trait_leader_stage_0 = yes
+					has_trait = leader_trait_curator
+				}
+			}
+			leader_give_symbiosis_trait_stage_0 = yes
+		}
+	}
+}

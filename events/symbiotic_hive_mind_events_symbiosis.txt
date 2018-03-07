@@ -1,0 +1,52 @@
+namespace = symbiotic_hive_mind_symbiosis
+
+### Unlocking the Engineered Evolution AP gives the symbiosis_1 trait - General
+country_event = {
+  id = symbiotic_hive_mind_symbiosis.1
+  title = symbiotic_hive_mind_symbiosis.1.t
+  desc = symbiotic_hive_mind_symbiosis.1.d
+  picture = GFX_evt_genetic_modification
+
+  trigger = {
+    has_valid_civic = civic_symbiosis
+    NOT = { has_country_flag = symbiosis_1_flag }
+    has_ascension_perk = ap_engineered_evolution
+
+    NOT = {
+      has_country_flag = flag_custom_symbiotic
+    }
+  }
+
+  option = {
+    name = symbiotic_hive_mind_symbiosis.1.a
+    set_country_flag = symbiosis_1_flag
+
+    custom_tooltip = symbiosis_1_unlocked
+		empire_upgrade_symbiosis = yes
+  }
+}
+
+# Havoll Hive
+country_event = {
+  id = symbiotic_hive_mind_symbiosis.2
+  title = symbiotic_hive_mind_symbiosis.1.t
+  desc = symbiotic_hive_mind_symbiosis.2.d
+  picture = GFX_evt_genetic_modification
+
+  trigger = {
+    has_valid_civic = civic_symbiosis
+    NOT = { has_country_flag = symbiosis_1_flag }
+    has_ascension_perk = ap_engineered_evolution
+
+    has_country_flag = flag_custom_symbiotic
+    has_country_flag = flag_havoll_hive
+  }
+
+  option = {
+    name = symbiotic_hive_mind_symbiosis.1.a
+    set_country_flag = symbiosis_1_flag
+
+    custom_tooltip = symbiosis_1_unlocked
+		empire_upgrade_symbiosis = yes
+  }
+}

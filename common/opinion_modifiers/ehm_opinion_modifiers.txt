@@ -1,0 +1,30 @@
+### Infested Hive Mind
+opinion_infester_species = {
+	trigger = {
+		NOT = { has_authority = auth_hive_mind }
+		FROM = {
+			has_valid_civic = "civic_infestation"
+			has_authority = auth_hive_mind
+			has_policy_flag = infestation_not_forced
+		}
+	}
+
+	opinion = {
+		base = -10
+	}
+}
+
+opinion_forcefully_infester_species = {
+	trigger = {
+		NOT = { has_authority = auth_hive_mind }
+		FROM = {
+			has_valid_civic = "civic_infestation"
+			has_authority = auth_hive_mind
+			has_policy_flag = infestation_forced
+		}
+	}
+
+	opinion = {
+		base = -25
+	}
+}

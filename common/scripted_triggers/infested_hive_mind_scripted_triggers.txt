@@ -1,0 +1,159 @@
+has_infested_trait = {
+  OR = {
+    has_trait = trait_infested_0
+    has_trait = trait_infested_1
+    has_trait = trait_infested_2
+    has_trait = trait_infested_3
+    has_trait = trait_infested_4
+  }
+}
+
+has_infested_trait_leader = {
+  OR = {
+    has_infested_trait_leader_stage_0 = yes
+    has_infested_trait_leader_stage_1 = yes
+    has_infested_trait_leader_stage_2 = yes
+    has_infested_trait_leader_stage_3 = yes
+    has_infested_trait_leader_stage_4 = yes
+  }
+}
+
+has_infested_trait_leader_stage_0 = {
+  OR = {
+    has_trait = leader_trait_admiral_infested_0
+    has_trait = leader_trait_general_infested_0
+    has_trait = leader_trait_governor_infested_0
+    has_trait = leader_trait_scientist_infested_0
+  }
+}
+
+has_infested_trait_leader_stage_1 = {
+  OR = {
+    has_trait = leader_trait_admiral_infested_1
+    has_trait = leader_trait_general_infested_1
+    has_trait = leader_trait_governor_infested_1
+    has_trait = leader_trait_scientist_infested_1
+  }
+}
+
+has_infested_trait_leader_stage_2 = {
+  OR = {
+    has_trait = leader_trait_admiral_infested_2
+    has_trait = leader_trait_general_infested_2
+    has_trait = leader_trait_governor_infested_2
+    has_trait = leader_trait_scientist_infested_2
+  }
+}
+
+has_infested_trait_leader_stage_3 = {
+  OR = {
+    has_trait = leader_trait_admiral_infested_3
+    has_trait = leader_trait_general_infested_3
+    has_trait = leader_trait_governor_infested_3
+    has_trait = leader_trait_scientist_infested_3
+  }
+}
+
+has_infested_trait_leader_stage_4 = {
+  OR = {
+    has_trait = leader_trait_admiral_infested_4
+    has_trait = leader_trait_general_infested_4
+    has_trait = leader_trait_governor_infested_4
+    has_trait = leader_trait_scientist_infested_4
+  }
+}
+
+can_be_first_infested = {
+  is_sapient = yes
+  is_robot_pop = no
+  NOT = { has_infested_trait = yes }
+}
+
+empire_infested_tier_zero = {
+  NOR = {
+    has_technology = tech_epigenetic_triggers
+    has_technology = tech_gene_tailoring
+    has_technology = tech_infestation_mastery
+    has_ascension_perk = ap_perfect_symbiosis
+  }
+}
+
+empire_infested_tier_one = {
+  has_technology = tech_epigenetic_triggers
+  NOR = {
+    has_technology = tech_gene_tailoring
+    has_technology = tech_infestation_mastery
+    has_ascension_perk = ap_perfect_symbiosis
+  }
+}
+
+empire_infested_tier_two = {
+  has_technology = tech_epigenetic_triggers
+  has_technology = tech_gene_tailoring
+  NOR = {
+    has_technology = tech_infestation_mastery
+    has_ascension_perk = ap_perfect_symbiosis
+  }
+}
+
+empire_infested_tier_three = {
+  has_technology = tech_epigenetic_triggers
+  has_technology = tech_gene_tailoring
+  has_technology = tech_infestation_mastery
+  NOR = {
+    has_ascension_perk = ap_perfect_symbiosis
+  }
+}
+
+empire_infested_tier_four = {
+  has_technology = tech_epigenetic_triggers
+  has_technology = tech_gene_tailoring
+  has_technology = tech_infestation_mastery
+  has_ascension_perk = ap_perfect_symbiosis
+}
+
+pop_infestation_tier_can_be_upgraded = {
+  OR = {
+    AND = {
+      has_trait = trait_infested_0
+      owner = {
+        OR = {
+          empire_infested_tier_one = yes
+          empire_infested_tier_two = yes
+          empire_infested_tier_three = yes
+          empire_infested_tier_four = yes
+        }
+      }
+    }
+
+    AND = {
+      has_trait = trait_infested_1
+      owner = {
+        OR = {
+          empire_infested_tier_two = yes
+          empire_infested_tier_three = yes
+          empire_infested_tier_four = yes
+        }
+      }
+    }
+
+    AND = {
+      has_trait = trait_infested_2
+      owner = {
+        OR = {
+          empire_infested_tier_three = yes
+          empire_infested_tier_four = yes
+        }
+      }
+    }
+
+    AND = {
+      has_trait = trait_infested_3
+      owner = {
+        OR = {
+          empire_infested_tier_four = yes
+        }
+      }
+    }
+  }
+}

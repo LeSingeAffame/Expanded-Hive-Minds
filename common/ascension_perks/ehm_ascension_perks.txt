@@ -1,0 +1,33 @@
+ap_perfect_symbiosis = {
+	on_enabled = {
+		hidden_effect = {
+			country_event = { id = infested_hive_mind_infestation.50 }
+		}
+	}
+	possible = {
+    custom_tooltip = {
+      fail_text = "requires_technoloy_infestation_mastery"
+      has_technology = tech_infestation_mastery
+    }
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+		custom_tooltip = {
+			fail_text = "requires_ap_engineered_evolution"
+			has_ascension_perk = ap_engineered_evolution
+		}
+	}
+	modifier = {
+		description = ap_perfect_symbiosis_effect_desc
+	}
+
+	potential = {
+    has_valid_civic = civic_infestation
+		NOT = { has_ascension_perk = ap_perfect_symbiosis }
+	}
+
+	ai_weight = {
+		factor = 100
+	}
+}

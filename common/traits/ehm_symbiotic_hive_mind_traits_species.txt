@@ -1,0 +1,37 @@
+### Symbiosis
+trait_symbiosis_0 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_symbiosis_0.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+	alters_species_identity = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+	}
+}
+
+trait_symbiosis_1 = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_symbiosis_1.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+	alters_species_identity = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_growth_speed = 0.25
+		leader_age = 25
+		pop_resource_output = 0.10
+	}
+}

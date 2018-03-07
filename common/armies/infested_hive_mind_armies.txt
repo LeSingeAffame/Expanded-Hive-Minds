@@ -1,0 +1,26 @@
+# Infesting Armies
+infesting_army = {
+  damage = 1.15
+  health = 0.75
+  has_morale = no
+  morale_damage = 2.5
+  time = 90
+  maintenance = 0.4
+  icon_frame = 2
+
+	cost = {
+		minerals = 40
+    food = 5
+	}
+
+	potential = {
+    from = {
+			has_infested_trait = yes
+		}
+		owner = {
+      has_valid_civic = civic_infestation
+		}
+	}
+
+	prerequisites = { "tech_infesting_combat_mastery" }
+}

@@ -1,0 +1,96 @@
+### Infested
+trait_infested_0 = { #Basic level of infestation. Newly infested pops will get this.
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_infested_0.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+	alters_species_identity = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+    pop_growth_speed = -0.25
+    leader_age = -15
+    pop_resource_output = -0.25
+	}
+}
+
+trait_infested_1 = { #First level of infestation. The Host is not outright rejecting the Controller anymore. (Time / Special project)
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_infested_1.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+	alters_species_identity = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+    pop_growth_speed = -0.15
+    leader_age = -10
+    pop_resource_output = -0.15
+	}
+}
+
+trait_infested_2 = { #Second level of infestation. Better cooperation between the Host and the Controller. Starting point for the primary species. (Special projet)
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_infested_2.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+	alters_species_identity = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+    pop_growth_speed = -0.1
+    pop_resource_output = -0.05
+	}
+}
+
+trait_infested_3 = { #Third level of infestation. The Host and the Controller organisms has been modified to better live together. (Special project, 1st Genetic evolution Ascension Perk)
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_infested_3.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+	alters_species_identity = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+	}
+}
+
+trait_infested_4 = { #Fourth level of infestation. Better cooperation between the Host and the Controller. (Special projet, 2nd Genetic evolution Ascension Perk)
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_infested_4.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+	alters_species_identity = yes
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+    pop_growth_speed = 0.15
+    leader_age = 25
+    pop_resource_output = 0.15
+	}
+}
